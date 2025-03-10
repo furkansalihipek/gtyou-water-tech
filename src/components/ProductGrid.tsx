@@ -37,6 +37,13 @@ const ProductCard = ({ title, subtitle, image, darkMode = false, customBg }: Pro
         }
     };
 
+    const getPrimaryButtonStyle = (title: string) => {
+        if (title === "+Hydro G") {
+            return styles.hydroGPrimaryButton;
+        }
+        return styles.primaryButton;
+    };
+
     return (
         <div className={`${styles.productCard} ${customBg || (darkMode ? 'bg-black' : 'bg-gray-100')}`}>
             {title === "+GT Filters" || title === "+Cosmoz R" || title === "+Hydro G" ? (
@@ -68,7 +75,7 @@ const ProductCard = ({ title, subtitle, image, darkMode = false, customBg }: Pro
                             
                             {/* Butonlar */}
                             <div className={styles.buttonContainer}>
-                                <button className={`${styles.button} ${styles.primaryButton}`}>
+                                <button className={`${styles.button} ${getPrimaryButtonStyle(title)}`}>
                                     Bilgi Edin
                                 </button>
                                 <button className={`${styles.button} ${getSecondaryButtonStyle(title)}`}>

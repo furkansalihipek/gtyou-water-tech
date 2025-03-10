@@ -1,0 +1,210 @@
+.productCard {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* GT Filters için özel stil */
+.gtFiltersImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem;
+    transform: scale(1.3);
+}
+
+.gtFiltersImage img {
+    object-fit: contain;
+    object-position: center 50%;
+}
+
+/* Cosmoz R için özel stil */
+.cosmozRImage {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    transform: scale(1);
+}
+
+.cosmozRImage img {
+    object-fit: contain;
+    object-position: bottom;
+}
+
+/* R Series için özel stil */
+.rSeriesImage {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    transform: scale(0.9);
+}
+
+.rSeriesImage img {
+    object-fit: contain;
+    object-position: center 10%;
+}
+
+/* Hydro G için özel stil */
+.hydroGImage {
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 85%;
+    transform: scale(0.9);
+}
+
+.hydroGImage img {
+    object-fit: contain;
+    object-position: center top;
+}
+
+/* Hydro G için içerik stili */
+.content.hydroContent {
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent, transparent);
+}
+
+.content {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.button {
+    cursor: pointer;
+    padding: 0.35rem 0.7rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: 400;
+    min-width: 90px;
+}
+
+.primaryButton {
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+}
+
+.primaryButton:hover {
+    background-color: #2563eb;
+}
+
+.secondaryButton {
+    background-color: transparent;
+    border: 1px solid #3B82F6;
+    color: #3B82F6;
+}
+
+.secondaryButton:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Light tema için ikincil buton */
+.secondaryButtonLight {
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+.secondaryButtonLight:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+/* Hydro G için beyaz buton */
+.secondaryButtonWhite {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.secondaryButtonWhite:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+    .gtFiltersImage {
+        padding: 1rem;
+    }
+
+    .rSeriesImage {
+        height: 180px;
+    }
+
+    .cosmozRImage {
+        bottom: -15%;
+        height: 115%;
+    }
+
+    .hydroGImage {
+        bottom: -25%;
+        height: 90%;
+    }
+
+    .content.hydroContent {
+        padding-top: 0;
+    }
+
+    .buttonContainer {
+        gap: 0.6rem;
+    }
+
+    .button {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .gtFiltersImage {
+        padding: 1.5rem;
+    }
+
+    .rSeriesImage {
+        height: 200px;
+    }
+
+    .cosmozRImage {
+        bottom: -20%;
+        height: 120%;
+    }
+
+    .hydroGImage {
+        bottom: -30%;
+        height: 95%;
+    }
+
+    .content.hydroContent {
+        padding-top: 0;
+    }
+} 

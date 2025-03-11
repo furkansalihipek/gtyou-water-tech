@@ -11,13 +11,15 @@ const Header = () => {
             <div className="container mx-auto px-10">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <h1 className="text-xl font-bold mr-10 md:text-2xl">Gtyou</h1>
+                    <Link href="/" className="text-xl font-bold mr-10 md:text-2xl hover:text-gray-700 transition-colors">
+                        Gtyou
+                    </Link>
                     {/* Desktop Menü */}
                     <nav className="hidden md:block">
                         <ul className="flex items-center space-x-8">
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/evsel" 
                                     className="text-gray-600 hover:text-gray-900 transition-colors text-sm lg:text-base"
                                 >
                                     Evsel Grup
@@ -33,7 +35,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/more-info" 
                                     className="text-gray-600 hover:text-gray-900 transition-colors text-sm lg:text-base"
                                 >
                                     Daha Fazla Bilgi
@@ -109,7 +111,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/more-info" 
                                     className="block px-2 py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
                                 >
                                     Daha Fazla Bilgi

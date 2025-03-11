@@ -3,7 +3,7 @@ import styles from '@/styles/Titan.module.css';
 
 const Titan = () => {
     return (
-        <section className={`${styles.section} container mx-auto`}>
+        <section className={`${styles.section}`}>
             <div className={styles.container}>
                 {/* Logo */}
                 <div className={styles.logoContainer}>

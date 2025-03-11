@@ -1,0 +1,104 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 3rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Son üç kart için özel stil */
+.grid > div:nth-last-child(-n+3) {
+  grid-column: 1 / -1;
+  max-width: 100%;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border: 1px solid #e1e8f0;
+}
+
+.grid > div:nth-last-child(-n+3) .title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.grid > div:nth-last-child(-n+3) .description {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobil için responsive tasarım */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .grid > div:nth-last-child(-n+3) .title {
+    font-size: 1.75rem;
+  }
+
+  .grid > div:nth-last-child(-n+3) .description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Tablet için responsive tasarım */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .grid {
+    gap: 1.75rem;
+  }
+
+  .grid > div:nth-last-child(-n+3) .title {
+    font-size: 1.85rem;
+  }
+}
+
+/* Büyük ekranlar için responsive tasarım */
+@media (min-width: 1025px) {
+  .container {
+    padding: 4rem 2rem;
+  }
+
+  .grid {
+    gap: 2.5rem;
+  }
+
+  .grid > div:nth-last-child(-n+3) {
+    padding: 2.5rem;
+  }
+} 

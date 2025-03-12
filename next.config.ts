@@ -1,17 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/gtyou-water-tech' : '',
   images: {
     unoptimized: true,
-    domains: ['localhost'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  }
+  },
+  basePath: process.env.NODE_ENV === 'production' ? '/gtyou-water-tech' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/gtyou-water-tech/' : '',
 };
 
 export default nextConfig;

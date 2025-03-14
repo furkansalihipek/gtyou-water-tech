@@ -27,7 +27,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/endustriyel" 
                                     className="text-gray-600 hover:text-gray-900 transition-colors text-sm lg:text-base"
                                 >
                                     Endüstriyel Grup
@@ -43,7 +43,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/satis-destek" 
                                     className="text-gray-600 hover:text-gray-900 transition-colors text-sm lg:text-base"
                                 >
                                     Satış Destek
@@ -95,7 +95,7 @@ const Header = () => {
                         <ul className="flex flex-col space-y-4">
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/evsel" 
                                     className="block px-2 py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
                                 >
                                     Evsel Grup
@@ -103,7 +103,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/endustriyel" 
                                     className="block px-2 py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
                                 >
                                     Endüstriyel Grup
@@ -119,7 +119,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link 
-                                    href="#" 
+                                    href="/satis-destek" 
                                     className="block px-2 py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded transition-colors"
                                 >
                                     Satış Destek

@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/Product.module.css';
 
 interface ProductCardProps {
@@ -7,9 +10,10 @@ interface ProductCardProps {
     image: string;
     darkMode?: boolean;
     customBg?: string;
+    id: string;
 }
 
-const ProductCard = ({ title, subtitle, image, darkMode = false, customBg }: ProductCardProps) => {
+const ProductCard = ({ title, subtitle, image, darkMode = false, customBg, id }: ProductCardProps) => {
     const getImageContainerClass = (title: string) => {
         switch (title) {
             case "+GT Filters":
@@ -44,6 +48,10 @@ const ProductCard = ({ title, subtitle, image, darkMode = false, customBg }: Pro
         return styles.primaryButton;
     };
 
+    const handleWhatsAppClick = () => {
+        window.open('https://wa.me/905538793231', '_blank');
+    };
+
     return (
         <div className={`${styles.productCard} ${customBg || (darkMode ? 'bg-black' : 'bg-gray-100')}`}>
             {title === "+GT Filters" || title === "+Cosmoz R" || title === "+Hydro G" ? (
@@ -75,10 +83,10 @@ const ProductCard = ({ title, subtitle, image, darkMode = false, customBg }: Pro
                             
                             {/* Butonlar */}
                             <div className={styles.buttonContainer}>
-                                <button className={`${styles.button} ${getPrimaryButtonStyle(title)}`}>
+                                <Link href={`/more-info#${id}`} className={`${styles.button} ${getPrimaryButtonStyle(title)}`}>
                                     Bilgi Edin
-                                </button>
-                                <button className={`${styles.button} ${getSecondaryButtonStyle(title)}`}>
+                                </Link>
+                                <button onClick={handleWhatsAppClick} className={`${styles.button} ${getSecondaryButtonStyle(title)}`}>
                                     Satın Alın
                                 </button>
                             </div>
@@ -98,10 +106,10 @@ const ProductCard = ({ title, subtitle, image, darkMode = false, customBg }: Pro
                         
                         {/* Butonlar */}
                         <div className={styles.buttonContainer}>
-                            <button className={`${styles.button} ${styles.primaryButton}`}>
+                            <Link href={`/more-info#${id}`} className={`${styles.button} ${styles.primaryButton}`}>
                                 Bilgi Edin
-                            </button>
-                            <button className={`${styles.button} ${getSecondaryButtonStyle(title)}`}>
+                            </Link>
+                            <button onClick={handleWhatsAppClick} className={`${styles.button} ${getSecondaryButtonStyle(title)}`}>
                                 Satın Alın
                             </button>
                         </div>
@@ -130,26 +138,30 @@ const ProductGrid = () => {
             title: "+GT Filters",
             subtitle: "Coconat Bazlı Filtre Teknolojisi.",
             image: "/hindistan cevisi resim.png",
-            darkMode: true
+            darkMode: true,
+            id: "gt-filters"
         },
         {
             title: "+Cosmoz R",
             subtitle: "Günlük 100 Ton'a Kadar Kullanılabilir Nitelikli Su.",
             image: "/ozmoz resim.png",
-            darkMode: true
+            darkMode: true,
+            id: "cozmos-r"
         },
         {
             title: "+R Series",
             subtitle: "İçme Suyunuzu 2.500 Litreye Kadar Üretebilirsiniz",
             image: "/rseries resim.png",
-            darkMode: false
+            darkMode: false,
+            id: "r-series"
         },
         {
             title: "+Hydro G",
             subtitle: "Alkali ve Antioksidan suyu Keşfet!",
             image: "/kadın bardaklı.png",
             darkMode: true,
-            customBg: "bg-gradient-to-b from-[#6A6F6E] to-[#99B3B2]"
+            customBg: "bg-gradient-to-b from-[#6A6F6E] to-[#99B3B2]",
+            id: "hydro-g"
         }
     ];
 

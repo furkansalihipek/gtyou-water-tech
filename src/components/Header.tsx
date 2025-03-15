@@ -1,10 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [pathname]);
 
     return (
         <header className=" top-0 left-0 right-0 bg-white z-50">

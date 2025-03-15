@@ -25,7 +25,6 @@
   grid-column: 1 / -1;
   max-width: 100%;
   background: linear-gradient(145deg, #ffffff, #f8fafc);
-  border: 1px solid #e1e8f0;
 }
 
 .grid > div:nth-last-child(-n+3) .title {

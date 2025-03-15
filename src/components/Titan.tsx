@@ -1,7 +1,14 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/Titan.module.css';
 
 const Titan = () => {
+    const handleWhatsAppClick = () => {
+        window.open('https://wa.me/905538793231', '_blank');
+    };
+
     return (
         <section className={`${styles.section}`}>
             <div className={styles.container}>
@@ -52,10 +59,10 @@ const Titan = () => {
 
                 {/* Butonlar */}
                 <div className={styles.buttonContainer}>
-                    <button className={styles.buyButton}>
+                    <Link href="/more-info#titan-x" className={styles.buyButton}>
                         Bilgi Edin
-                    </button>
-                    <button className={styles.infoButton}>
+                    </Link>
+                    <button onClick={handleWhatsAppClick} className={styles.infoButton}>
                         Satın Alın
                     </button>
                 </div>

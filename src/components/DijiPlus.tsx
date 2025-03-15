@@ -1,7 +1,14 @@
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/DijiPlus.module.css';
 
 const DijiPlus = () => {
+    const handleWhatsAppClick = () => {
+        window.open('https://wa.me/905538793231', '_blank');
+    };
+
     return (
         <div>
             <section className={styles.dijiPlusSection}>
@@ -42,10 +49,10 @@ const DijiPlus = () => {
 
                         {/* Butonlar */}
                         <div className={styles.buttonContainer}>
-                            <button className={styles.blueButton}>
+                            <Link href="/more-info#digi-plus" className={styles.blueButton}>
                                 Bilgi Edin
-                            </button>
-                            <button className={styles.whiteButton}>
+                            </Link>
+                            <button onClick={handleWhatsAppClick} className={`${styles.blueButton} ${styles.whiteButton}`}>
                                 Satın Alın
                             </button>
                         </div>

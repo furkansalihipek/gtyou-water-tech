@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import styles from '../../styles/MoreInfo.module.css';
 import ProductCard from '../../components/ProductCard';
 
@@ -61,15 +63,47 @@ const products = [
 ];
 
 export default function MoreInfo() {
+  useEffect(() => {
+    // Sayfa yüklendikten sonra scroll işlemini gerçekleştir
+    const handleScroll = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          // Mobil tarayıcılar için timeout ile bekle
+          setTimeout(() => {
+            const yOffset = -50; // Üstten boşluk bırakmak için
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            
+            window.scrollTo({
+              top: y,
+              behavior: 'smooth'
+            });
+          }, 500); // 500ms bekle
+        }
+      }
+    };
+
+    // İlk yüklemede ve hash değiştiğinde çalıştır
+    handleScroll();
+    window.addEventListener('hashchange', handleScroll);
+
+    return () => {
+      window.removeEventListener('hashchange', handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.grid}>
         {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            title={product.title}
-            description={product.description}
-          />
+          <div key={product.id} id={product.id}>
+            <ProductCard
+              title={product.title}
+              description={product.description}
+            />
+          </div>
         ))}
       </div>
     </div>

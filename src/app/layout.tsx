@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Gtyou Water Tech",
   description: "Su arıtma sistemleri ve çözümleri",
+  icons: {
+    icon: '/icon.jpg',
+  },
 };
 
 export default function RootLayout({

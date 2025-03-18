@@ -79,7 +79,7 @@ const HeroProduct = ({ product, textAlign = "left" }: HeroProductProps) => {
   const [isMobile, setIsMobile] = useState(false);
   
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/905538793231', '_blank');
+    window.open('https://wa.me/905412650436', '_blank');
   };
 
   useEffect(() => {
@@ -167,7 +167,7 @@ const W23Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
   
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/905538793231', '_blank');
+    window.open('https://wa.me/905412650436', '_blank');
   };
 
   useEffect(() => {
@@ -249,7 +249,7 @@ export default function EvselPage() {
   const [isMobile, setIsMobile] = useState(false);
   
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/905538793231', '_blank');
+    window.open('https://wa.me/905412650436', '_blank');
   };
 
   useEffect(() => {
@@ -350,7 +350,9 @@ export default function EvselPage() {
         </div>
 
         {/* Bottom Hero Product */}
-        <HeroProduct product={bottomHeroProduct} textAlign="center" />
+        <div className="mb-8">
+          <HeroProduct product={bottomHeroProduct} textAlign="center" />
+        </div>
       </div>
     </main>
   );

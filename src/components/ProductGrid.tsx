@@ -49,7 +49,7 @@ const ProductCard = ({ title, subtitle, image, darkMode = false, customBg, id }:
     };
 
     const handleWhatsAppClick = () => {
-        window.open('https://wa.me/905538793231', '_blank');
+        window.open('https://wa.me/905412650436', '_blank');
     };
 
     return (

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function EndustriyelPage() {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/905538793231', '_blank');
+    window.open('https://wa.me/905412650436', '_blank');
   };
 
   return (

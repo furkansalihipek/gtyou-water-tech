@@ -128,48 +128,110 @@
 @media (max-width: 1280px) {
   .logoContainer {
     margin-left: -12rem;
+    margin-top: -4rem;
   }
   
   .productContainer {
     max-width: 800px;
     height: 450px;
+    margin-top: -11rem;
   }
   
   .priceInfo {
     margin-right: -10rem;
     margin-top: -10rem;
+    font-size: 1.4rem;
   }
   
   .price {
     margin-left: 20rem;
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 1024px) {
   .logoContainer {
     margin-left: -8rem;
+    margin-top: -3rem;
   }
   
   .productContainer {
     max-width: 700px;
     height: 400px;
-    margin-top: -10rem;
+    margin-top: -9rem;
   }
   
   .priceInfo {
     margin-right: -5rem;
     margin-top: -8rem;
+    font-size: 1.3rem;
   }
   
   .price {
     margin-left: 15rem;
+    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 768px) {
   .dijiPlusSection {
     border-radius: 12px;
-    padding: 0.25rem;
+    padding: 1rem;
+  }
+
+  .productWrapper {
+    padding: 1rem 0.5rem;
+  }
+
+  .logoContainer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+    margin-top: -1rem;
+  }
+
+  .productContainer {
+    max-width: 100%;
+    height: auto;
+    margin-top: -2rem;
+    padding: 0 1rem;
+  }
+  
+  .priceInfo {
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .price {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .buttonContainer {
+    margin: 1rem 0;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 1rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .blueButton, .whiteButton {
+    width: auto;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    min-width: 160px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dijiPlusSection {
+    padding: 0.5rem;
   }
 
   .productWrapper {
@@ -177,40 +239,30 @@
   }
 
   .logoContainer {
-    margin: 0 auto;
-    width: 100%;
     max-width: 200px;
-    margin-top: -2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .productContainer {
-    max-width: 100%;
-    height: auto;
-    margin-top: 0;
-    padding: 0;
-    margin-top: -3.5rem;
+    padding: 0 0.5rem;
+    margin-top: -1.5rem;
   }
-  
+
   .priceInfo {
     font-size: 1.1rem;
-    flex-direction: column;
-    gap: 0.15rem;
-    margin: 0.5rem 0 0 0;
-    text-align: center;
+    margin: 0.75rem 0;
+    gap: 0.2rem;
   }
   
   .price {
-    font-size: 1.5rem;
-    margin: 0.15rem 0;
-    text-align: center;
+    font-size: 1.4rem;
+    margin: 0.25rem 0;
   }
-  
+
   .buttonContainer {
-    margin: 0.5rem 0;
     flex-direction: column;
-    width: 100%;
+    gap: 0.75rem;
     padding: 0 0.75rem;
-    gap: 0.5rem;
   }
 
   .blueButton, .whiteButton {
@@ -218,48 +270,5 @@
     padding: 0.6rem 1.25rem;
     font-size: 0.95rem;
     min-width: unset;
-    min-height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .dijiPlusSection {
-    padding: 0.15rem;
-  }
-
-  .productWrapper {
-    padding: 0.35rem 0.15rem;
-  }
-
-  .logoContainer {
-    max-width: 180px;
-    margin-bottom: 0.15rem;
-  }
-
-  .productContainer {
-    padding: 0;
-  }
-
-  .priceInfo {
-    font-size: 1rem;
-    margin-top: 0.35rem;
-    gap: 0.1rem;
-  }
-  
-  .price {
-    font-size: 1.35rem;
-    margin: 0.1rem 0;
-  }
-  
-  .buttonContainer {
-    margin: 0.35rem 0;
-    gap: 0.35rem;
-    padding: 0 0.5rem;
-  }
-
-  .blueButton, .whiteButton {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    min-height: 36px;
   }
 } 

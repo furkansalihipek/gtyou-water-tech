@@ -166,8 +166,8 @@ const ProductGrid = () => {
     ];
 
     return (
-        <section className="py-3 sm:py-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <section className="py-3 xs:py-4 sm:py-5 lg:py-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xs:gap-4 sm:gap-5 lg:gap-6">
                 {products.map((product, index) => (
                     <ProductCard
                         key={index}
